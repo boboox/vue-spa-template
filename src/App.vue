@@ -1,5 +1,5 @@
 <template>
-    <div class="app" id="app">
+    <div class="app demofont" id="app">
         <p class="title">{{project}}</p>
         <page-nav></page-nav>
         <router-view/>

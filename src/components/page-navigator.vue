@@ -12,6 +12,12 @@
                 <li>
                     <span class="link-button" v-link="{name:'filter'}">filter</span>
                 </li>
+                <li>
+                    <span class="link-button" v-link="{name:'keenui'}">keenui</span>
+                </li>
+                <li>
+                    <span class="link-button" v-link="{name:'iconfont'}">iconfont</span>
+                </li>
             </ul>
         </p>
     </div>

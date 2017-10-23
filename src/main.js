@@ -6,6 +6,10 @@ import router from './router';
 import store from './vuex/store';
 import filters from './utils/filters/index.js';
 import linkDirective from './utils/directives/link';
+import KeenUI from 'keen-ui';
+import 'keen-ui/dist/keen-ui.css';
+import './styles/iconfont.css';
+Vue.use(KeenUI);
 
 Vue.config.productionTip = false;
 Vue.config.debug = true;

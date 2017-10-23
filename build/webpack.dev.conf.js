@@ -1,4 +1,5 @@
 'use strict'
+const path = require('path')
 const utils = require('./utils')
 const webpack = require('webpack')
 const config = require('../config')
@@ -21,6 +22,15 @@ module.exports = merge(baseWebpackConfig, {
     // cheap-module-eval-source-map is faster for development
     devtool: '#cheap-module-eval-source-map',
     plugins: [
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                sassLoader: {
+                    data: '@import "src/styles/variables.scss";',
+                    includePaths: 'src/styles'
+                },
+                context: path.resolve(__dirname) // your project root
+            }
+        }),
         new webpack.optimize.CommonsChunkPlugin({
             names: ['vendor', 'manifest']
         }), //  提取第三方库
